@@ -1,0 +1,27 @@
+/* Estilos para los adjuntos */
+.lista-adjuntos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.btn-adjunto {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+    border: 1px solid #ccc;
+}
+
+.btn-adjunto:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-1px);
+    border-color: #3498db;
+}
