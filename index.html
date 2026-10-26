@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Tiempos - Plan REP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header id="header-principal">
+        <div class="header-top">
+            <h1>Línea de Tiempo: Flujo de Información</h1>
+        </div>
+        
+                <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalDias">0</span>
+                <span class="stat-label">Duración Total</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalCorreos">0</span>
+                <span class="stat-label">Total Hitos</span>
+            </div>
+            <!-- NUEVOS KPI -->
+            <div class="stat-card" style="border-top-color: #2c3e50;">
+                <span class="stat-number" id="totalUT" style="color: #2c3e50;">0</span>
+                <span class="stat-label">Correos UT</span>
+            </div>
+            <div class="stat-card" style="border-top-color: #e74c3c;">
+                <span class="stat-number" id="totalArcadis" style="color: #e74c3c;">0</span>
+                <span class="stat-label">Correos Arcadis</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="timeline-header-seccion">
+            <h2>🕒 Línea de Tiempo de Correos</h2>
+            <button id="btnModoPresentacion" class="btn-presentacion">⛶ Modo Presentación</button>
+        </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline" id="timeline"></div>
+        </div>
+
+        <div id="seccion-datos">
+            <section class="tabla-resumen">
+                <h2>📋 Resumen de Correos y Tiempos Transcurridos</h2>
+                <div class="table-responsive">
+                    <table id="tablaCorreos">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Fecha y Hora</th>
+                                <th>Actor</th>
+                                <th>Asunto</th>
+                                <th>Tiempo Exacto</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grafica-seccion">
+                <h2>📈 Intervalos de Espera entre Correos</h2>
+                <div class="chart-container">
+                    <canvas id="graficaTiempos"></canvas>
+                </div>
+            </section>
+                        <!-- NUEVA SECCIÓN: GRÁFICA DE CORREOS POR MES -->
+            <section class="grafica-seccion">
+                <h2>📊 Cantidad de Correos Enviados por Mes</h2>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="graficaMensual"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer-principal">
+        <p>Análisis de Trazabilidad Documental | UT Plan REP - URRA</p>
+    </footer>
+
+    <button id="btnSalirPresentacion" class="btn-salir-fs">✕ Salir de Presentación</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
