@@ -185,3 +185,87 @@ tr:hover { background-color: #f1f2f6; }
 
 .chart-container { position: relative; height: 400px; width: 100%; }
 footer { text-align: center; color: #7f8c8d; font-size: 0.8em; padding: 20px; }
+
+/* =========================================
+   DISEÑO RESPONSIVO (CELULARES Y TABLETS)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajustes Generales */
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    /* 2. KPIs (Se apilan en 2 columnas) */
+    .stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .stat-card {
+        width: 45%; /* Ocupan la mitad de la pantalla cada uno */
+        padding: 10px;
+        min-width: auto;
+    }
+    .stat-number {
+        font-size: 1.3em;
+    }
+    .stat-label {
+        font-size: 0.7em;
+    }
+
+    /* 3. Cabecera de la línea de tiempo */
+    .timeline-header-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .btn-presentacion {
+        width: 100%; /* El botón ocupa todo el ancho */
+        justify-content: center;
+    }
+
+    /* 4. La Línea de Tiempo */
+    .timeline-wrapper {
+        padding: 120px 0 80px 0; /* Reducimos el espacio vertical */
+        border-radius: 0;
+    }
+    .container {
+        width: 260px; /* Tarjetas más angostas */
+    }
+    .content {
+        padding: 10px;
+    }
+    .content h3 {
+        font-size: 0.85em;
+    }
+    .content p {
+        font-size: 0.75em;
+    }
+    
+    /* 5. Tabla (Permite scroll horizontal dentro de la tabla) */
+    .tabla-resumen, .grafica-seccion {
+        padding: 15px 10px;
+    }
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto; /* Scroll horizontal solo en la tabla */
+    }
+    table {
+        min-width: 600px; /* Obliga a la tabla a no apretarse, activa el scroll */
+    }
+
+    /* 6. Gráficas (Se achican un poco en celular) */
+    .chart-container {
+        height: 300px !important;
+    }
+
+    /* 7. Modo Presentación en Celular */
+    body.modo-presentacion .timeline-wrapper {
+        padding: 35vh 0; 
+    }
+}
